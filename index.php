@@ -1,5 +1,7 @@
 <?php
 include 'Model/db.php';
+
+
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +15,7 @@ include 'Model/db.php';
     <title>Document</title>
 </head>
 
-<body style=backgrond-color: # 030c54;>
+<body style="background-color: #222222;">
     <main class="container ">
         <div class="container-sm bg-warning rounded-3 p-5" style="margin: 100px auto">
             <table class="table table-striped table-dark rounded-3">
@@ -31,6 +33,7 @@ include 'Model/db.php';
                 </thead>
                 <tbody>
                     <?php foreach ($hotels as $info) { ?>
+
                         <tr>
                             <th scope="row"></th>
                             <td>
@@ -40,7 +43,7 @@ include 'Model/db.php';
                                 <?php echo ($info['description']) ?>
                             </td>
                             <td>
-                                <?php echo ($info['parking'] ?? '0'); ?>
+                                <?php echo ($info['parking'] ? '1' : '0'); ?>
                             </td>
                             <td>
                                 <?php echo ($info['vote']) ?>
