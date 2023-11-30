@@ -1,4 +1,7 @@
 <?php
+
+
+
 include __DIR__ . '/../Model/db.php';
 
 if (isset($_GET['parking']) && isset($_GET['vote'])) {
@@ -30,8 +33,8 @@ if (isset($_GET['parking']) && isset($_GET['vote'])) {
         <form action="index.php" method="GET">
             <select class="p-1" aria-label="Default select example" name="parking">
                 <option selected value="all">All</option>
-                <option value="true">With parking</option>
-                <option value="false">no parking</option>
+                <option value="1">With parking</option>
+                <option value="0">no parking</option>
             </select>
             <select class="p-1" aria-label="Default select example" name="vote">
                 <option value="0">1</option>
